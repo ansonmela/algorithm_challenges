@@ -1,7 +1,6 @@
 class LinkedListNode
 	attr_accessor :value, :next_node
 
-
 	def initialize(value, next_node=nil)
 		@value = value
 		@next_node = next_node
@@ -102,28 +101,3 @@ print_values(node3)
 
 revlist = reverse_list(node3)
 print_values(revlist)
-
-
-
-def add_to_tail(list, value)
-	if list.next_node == nil
-		new_node = LinkedListNode.new(value)
-		list.next_node = new_node
-	else
-		add_to_tail(list.next_node, value)
-	end
-end
-
-add_to_tail(node3, 45)
-
-
-
-
-
-
-
-	
-
-
-
-
